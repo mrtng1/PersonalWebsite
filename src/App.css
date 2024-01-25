@@ -49,13 +49,27 @@
     margin-right: 10%;
 }
 
+.basicText {
+    color: #e4e4e4;
+    font-size: 1.5em;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.skillsSection {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .contactInfo {
     margin-top: 35%;
     margin-bottom: 5%;
 }
 
 .spaceDivider{
-    height: 100vh;
+    height: 150px;
 }
 
 .disableUserSelect {

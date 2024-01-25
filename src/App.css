@@ -43,7 +43,7 @@
 
 .aboutMe {
     color: #e4e4e4;
-    font-size: 1.5em;
+    font-size: 1.2em;
    margin-top: 30%;
     margin-left: 10%;
     margin-right: 10%;
@@ -57,14 +57,14 @@
     margin-right: 10%;
 }
 
-.skillsSection {
+.textSection {
     width: 100%;
     margin: 0 auto;
     padding: 0;
 }
 
 .contactInfo {
-    margin-top: 35%;
+    margin-top: 27%;
     margin-bottom: 5%;
 }
 
@@ -96,4 +96,16 @@
 .button:hover {
     color: #004466;
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        scale: 150%;
+        margin-left: 15%;
+    }
+
+    .middle {
+        margin-top: 4%;
+        width: 75%;
+    }
 }

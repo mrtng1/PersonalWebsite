@@ -5,6 +5,7 @@ import {MdKeyboardDoubleArrowDown, MdOutlineEmail} from "react-icons/md";
 import {IoIosArrowDown, IoLogoInstagram} from "react-icons/io";
 import {VscGithub} from "react-icons/vsc";
 import SkillsComponent from "./Components/SkillsComponent";
+import AboutMeComponent from "./Components/AboutMeComponent";
 
 function App() {
     const linkedinURL = "https://www.linkedin.com/in/mrtngrulyo/";
@@ -33,7 +34,13 @@ function App() {
                     </motion.p>
 
                 <div className="aboutMe disableUserSelect">
-                    Computer Science student with skills in Java, TypeScript, JavaScript, Python, SQL, and GitHub.
+                    Passionate and Skilled Computer Science student from Slovakia
+                    <br></br>
+                    <br></br>
+                    Based in Esbjerg, Denmark
+                    <br></br>
+                    <br></br>
+                    Skills in Java, TypeScript, JavaScript, Python, SQL, and GitHub.
                     <br></br>
                 </div>
 
@@ -66,7 +73,11 @@ function App() {
             </motion.div>
 
             <div className="spaceDivider"></div>
-            <div className="skillsSection">
+            <div className="textSection">
+                <AboutMeComponent />
+            </div>
+            <div className="spaceDivider"></div>
+            <div className="textSection">
                 <SkillsComponent />
             </div>
         </div>

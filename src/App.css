@@ -3,18 +3,19 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+    background-color: #0e0e0e;
 }
 
 .middle {
   display: flex;
   width: 40%;
   height: 80%;
-  background-color: black;
+  background-color: #1b1b1b;
   border-radius: 5%;
 }
 
-.nameText {
-    color: white;
+.headerText {
+    color: #e4e4e4;
     font-size: 2em;
     font-weight: bold;
     margin-left: 30%;

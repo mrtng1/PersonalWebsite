@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-    background-color: #0e0e0e;
+    background: linear-gradient(45deg, #0e0e0e 0%, #1b1B1B 100%);
 }
 
 .middle {
@@ -21,4 +21,35 @@
     margin-left: 30%;
     margin-right: 25%;
     padding: 0;
+}
+
+.aboutMe {
+    color: #e4e4e4;
+    font-size: 1.5em;
+   margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contactInfo {
+    margin-top: 35%;
+}
+
+.button {
+    scale: 260%;
+    background-color: transparent;
+    border: none;
+    color: #0077B5;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 15%;
+    outline: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    color: #004466;
+    transform: scale(1.1);
 }

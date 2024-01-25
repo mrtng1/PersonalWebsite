@@ -12,26 +12,9 @@ function App() {
     const instagramUrl = "https://www.instagram.com/martingrulyo/";
     const githubUrl = "https://github.com/mrtng1";
 
-    const handleLinkedInClick = () => {
-        window.location.href = linkedinURL;
-    };
-
-    const handleEmailClick = () => {
-        window.location.href = "mailto:" + email;
+    function handleButtonClick(url) {
+        window.location.href = url;
     }
-
-    const handleInstagramClick = () => {
-        window.location.href = instagramUrl;
-    }
-
-    const handleGithubClick = () => {
-        window.location.href = githubUrl;
-    }
-
-    const buttonVariants = {
-        hidden: { y: -3, opacity: 0 },
-        visible: { y: 0, opacity: 1 }
-    };
 
     return (
         <div className="main-container">
@@ -55,46 +38,30 @@ function App() {
                 </div>
 
                     <div className="contactInfo">
-                        <motion.button className="button" onClick={handleLinkedInClick}
-                                       variants={buttonVariants}
-                                       initial="hidden"
-                                       animate="visible"
-                                       whileHover={{ scale: 1.1 }}
-                                       transition={{ duration: 0.2, delay: 0}}>
+                        <motion.button className="button"
+                                       onClick={() => handleButtonClick(linkedinURL)}
+                                       whileHover={{ scale: 1.125, transition: { duration: 0.05 } }}>
                             <CiLinkedin />
                         </motion.button>
 
-                    <motion.button className="button"
-                            onClick={handleEmailClick}
-                            variants={buttonVariants}
-                            initial="hidden"
-                            animate="visible"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.2, delay: 0.15}}>
-                        <MdOutlineEmail />
-                    </motion.button>
+                        <motion.button className="button"
+                                       onClick={() => handleButtonClick(`mailto:${email}`)}
+                                       whileHover={{ scale: 1.125, transition: { duration: 0.05 } }}>
+                            <MdOutlineEmail />
+                        </motion.button>
 
-                    <motion.button className="button"
-                            onClick={handleInstagramClick}
-                            variants={buttonVariants}
-                            initial="hidden"
-                            animate="visible"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.2, delay: 0.3}}>
-                        <IoLogoInstagram />
-                    </motion.button>
+                        <motion.button className="button"
+                                       onClick={() => handleButtonClick(instagramUrl)}
+                                       whileHover={{ scale: 1.125, transition: { duration: 0.05 } }}>
+                            <IoLogoInstagram />
+                        </motion.button>
 
-                    <motion.button className="button"
-                            onClick={handleGithubClick}
-                            variants={buttonVariants}
-                            initial="hidden"
-                            animate="visible"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.2, delay: 0.45}}>
-                        <VscGithub />
-                    </motion.button>
-
-                </div>
+                        <motion.button className="button"
+                                       onClick={() => handleButtonClick(githubUrl)}
+                                       whileHover={{ scale: 1.125, transition: { duration: 0.05 } }}>
+                            <VscGithub />
+                        </motion.button>
+                    </div>
                 </div>
             </motion.div>
 

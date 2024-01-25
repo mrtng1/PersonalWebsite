@@ -3,8 +3,24 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-    background: linear-gradient(45deg, #0e0e0e 0%, #1b1B1B 100%);
+    background: linear-gradient(20deg, #0e0e0e, #1b1B1B, #0077B5);
+    background-size: 200% 200%;
+    animation: gradientAnimation 40s ease infinite;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 .middle {
   display: flex;

@@ -3,11 +3,13 @@ import {motion} from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
 import {MdOutlineEmail} from "react-icons/md";
 import {IoIosArrowDown, IoLogoInstagram} from "react-icons/io";
+import {VscGithub} from "react-icons/vsc";
 
 function App() {
     const linkedinURL = "https://www.linkedin.com/in/mrtngrulyo/";
     const email = "martingrulyo@gmail.com";
     const instagramUrl = "https://www.instagram.com/martingrulyo/";
+    const githubUrl = "https://github.com/mrtng1";
 
     const handleLinkedInClick = () => {
         window.location.href = linkedinURL;
@@ -19,6 +21,10 @@ function App() {
 
     const handleInstagramClick = () => {
         window.location.href = instagramUrl;
+    }
+
+    const handleGithubClick = () => {
+        window.location.href = githubUrl;
     }
 
     return (
@@ -54,6 +60,11 @@ function App() {
                     <button className="button" onClick={handleInstagramClick}>
                         <IoLogoInstagram />
                     </button>
+
+                    <button className="button" onClick={handleGithubClick}>
+                        <VscGithub />
+                    </button>
+
                 </div>
                 </div>
             </motion.div>

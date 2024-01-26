@@ -6,6 +6,7 @@ import {IoIosArrowDown, IoLogoInstagram} from "react-icons/io";
 import {VscGithub} from "react-icons/vsc";
 import SkillsComponent from "./Components/SkillsComponent";
 import AboutMeComponent from "./Components/AboutMeComponent";
+import SendEmailComponent from "./Components/SendEmailComponent";
 
 function App() {
     const linkedinURL = "https://www.linkedin.com/in/mrtngrulyo/";
@@ -79,6 +80,10 @@ function App() {
             <div className="spaceDivider"></div>
             <div className="textSection">
                 <SkillsComponent />
+            </div>
+            <div className="spaceDivider"></div>
+            <div className="mailSection">
+                <SendEmailComponent />
             </div>
         </div>
     );

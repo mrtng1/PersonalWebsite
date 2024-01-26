@@ -1,5 +1,5 @@
 import React from 'react';
-import './SkillsComponent.css';
+import './SendEmailComponent.css';
 import '.././App.css';
 
 function SkillsComponent() {

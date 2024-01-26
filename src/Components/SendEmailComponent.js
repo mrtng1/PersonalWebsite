@@ -37,7 +37,10 @@ function SendEmailComponent() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (validateForm()) {
-            mailService.sendEmail(email, name, message)
+            const subject = `Ny besked fra ${name} - ${email}`;
+            const body = `Navn: ${name}\nEmail: ${email}\nBesked: ${message}`;
+
+            mailService.sendEmail("mrtngrulyo@gmail.com", subject, body)
                 .then(() => {
                     console.log('Email sendt!');
                     alert('Email sendt!');
@@ -50,6 +53,7 @@ function SendEmailComponent() {
 
     return (
         <div>
+            <div className="headerText disableUserSelect">Contact Me</div>
             <div className="sendEmailContent">
                 <input
                     type="email"

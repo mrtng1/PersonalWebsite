@@ -1,27 +1,23 @@
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(20deg, #0e0e0e, #1b1B1B, #0077B5);
-    background-size: 200% 200%;
-    animation: gradientAnimation 30s ease infinite;
+    padding: 30px 0;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to bottom right, #0e0e0e, #1b1b1b);
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 75% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* eller 'absolute', afhængigt af dit layout */
+    right: 0; /* Juster denne værdi for at kontrollere afstanden fra højre kant */
+    top: 50%; /* Centrerer elementet vertikalt, juster efter behov */
+    transform: translateY(-50%); /* Sikrer at elementet er centreret fra dens midtpunkt */
+    width: 200px; /* Angiv en fast bredde */
 }
-
-
 
 .middle {
   display: flex;
@@ -34,9 +30,16 @@
 
 .headerText {
     color: #e4e4e4;
-    font-size: 2em;
+    font-size: 6em;
     font-weight: bold;
-    margin-left: 30%;
+    margin-right: 25%;
+    padding: 0;
+}
+
+.subHeaderText {
+    color: #e4e4e4;
+    font-size: 4em;
+    font-weight: bold;
     margin-right: 25%;
     padding: 0;
 }
@@ -44,34 +47,24 @@
 .aboutMe {
     color: #e4e4e4;
     font-size: 1.2em;
-   margin-top: 30%;
-    margin-left: 10%;
+    margin-top: 1%;
     margin-right: 10%;
 }
 
 .basicText {
     color: #e4e4e4;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
+    line-height: 3;
 }
 
-.textSection {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.mailSection{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.contactInfo {
-    margin-top: 27%;
-    margin-bottom: 5%;
+.textSection, .mailSection {
+    width: 95%; /* Adjust width if necessary for your design */
+    margin: 0 auto 100px; /* Add bottom margin for spacing */
+    padding: 50px 0; /* Add padding for visual separation */
+    transition: transform 0.2s ease-out; /* Smooth transition for any hover effects */
 }
 
 .spaceDivider{
@@ -87,6 +80,8 @@
 
 .button {
     scale: 260%;
+    min-height: 0;
+    min-width: 0;
     background-color: transparent;
     border: none;
     color: #0077B5;
@@ -94,7 +89,7 @@
     cursor: pointer;
     text-decoration: underline;
     padding: 0;
-    margin-left: 17%;
+    margin-top: 35%;
     outline: none;
     transition: color 0.1s, transform 0.1s;
 }
@@ -106,12 +101,31 @@
 
 @media only screen and (max-width: 600px) {
     .button {
-        scale: 150%;
+        scale: 200%;
         margin-left: 15%;
     }
 
     .middle {
         margin-top: 6%;
         width: 75%;
+    }
+
+    .contactInfo {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        margin-top: 2px;
+        width: 100%;
+        top: auto;
+        transform: none;
+    }
+
+    .basicText {
+        color: #e4e4e4;
+        font-size: 1em;
+        margin-top: 3%;
+        margin-left: 7%;
+        margin-right: 7%;
+        line-height: 1;
     }
 }

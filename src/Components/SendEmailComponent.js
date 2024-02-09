@@ -53,7 +53,7 @@ function SendEmailComponent() {
 
     return (
         <div>
-            <div className="headerText disableUserSelect">Contact Me</div>
+            <div className="subHeaderText disableUserSelect">Contact Me</div>
             <div className="sendEmailContent">
                 <input
                     type="email"

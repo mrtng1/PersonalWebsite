@@ -84,11 +84,11 @@ body, html {
     align-items: center;
     justify-content: flex-start; /* Align content to the left */
     gap: 10px; /* Space between icon and text */
-    padding: 10px 20px;
+    padding: 15px 30px !important;
     background-color: transparent;
     border: none;
     color: #0077B5;
-    font-size: 1em;
+    font-size: 1.2em !important;
     cursor: pointer;
     text-decoration: none;
     outline: none;

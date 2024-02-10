@@ -3,8 +3,10 @@ import '.././App.css';
 import { gsap } from 'gsap';
 import {CiLinkedin} from "react-icons/ci";
 import {MdOutlineEmail} from "react-icons/md";
-import {IoLogoInstagram} from "react-icons/io";
 import {VscGithub} from "react-icons/vsc";
+import { GrDownload } from "react-icons/gr";
+import resume from '../sources/Martin_Grulyo_cv.pdf';
+
 
 function ContactInfo() {
     const linkedinURL = "https://www.linkedin.com/in/mrtngrulyo/";
@@ -25,6 +27,9 @@ function ContactInfo() {
             <button className="button" onClick={() => handleButtonClick(githubUrl)}>
                 <VscGithub /><span>GitHub</span>
             </button>
+            <a href={resume} download className="button">
+                <GrDownload /><span>Get My Resume</span>
+            </a>
         </div>
     );
 }

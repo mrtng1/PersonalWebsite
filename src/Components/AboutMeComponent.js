@@ -4,7 +4,7 @@ import '.././App.css';
 function AboutMeComponent() {
     return (
         <div>
-            <div class="subHeaderText">About Me</div>
+            <div class="subHeaderText disableUserSelect">About Me</div>
             <div class="basicText">
                 Pursuing Computer Science, I specialize in Java, TypeScript, JavaScript, Python, SQL, and GitHub, enriched by a Cisco CCNA certification for network skills. <br />
                 Expanding into C# and web development with React & Angular, I balance multiple projects with proven leadership in team environments. <br />

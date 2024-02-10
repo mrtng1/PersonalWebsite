@@ -28,7 +28,7 @@ function ContactInfo() {
                 <VscGithub /><span>GitHub</span>
             </button>
             <a href={resume} download className="button">
-                <GrDownload /><span>Get My Resume</span>
+                <GrDownload /><span>My Resume</span>
             </a>
         </div>
     );

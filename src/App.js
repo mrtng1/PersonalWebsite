@@ -11,44 +11,44 @@ import HeadComponent from "./Components/HeadComponent";
 
 function App() {
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+        gsap.registerPlugin(ScrollToPlugin);
 
-        const sections = gsap.utils.toArray(".textSection, .mailSection");
+        const sections = gsap.utils.toArray('.textSection, .mailSection');
+        let currentIndex = 0; // Track the current section index
+        let isScrolling = false; // Track if we are currently scrolling to prevent new scrolls
 
-        const debounce = (func, wait, immediate) => {
-            let timeout;
-            return function() {
-                const context = this, args = arguments;
-                const later = function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                const callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
+        const scrollToSection = (index) => {
+            if (index >= 0 && index < sections.length && !isScrolling) {
+                isScrolling = true; // Start scrolling
+                currentIndex = index; // Update current index
+
+                gsap.to(window, {
+                    scrollTo: {
+                        y: sections[index].offsetTop,
+                        autoKill: false
+                    },
+                    duration: 0.5,
+                    onComplete: () => isScrolling = false // Re-enable scrolling after animation
+                });
+            }
         };
 
-        const scrollToSection = debounce((index) => {
-            gsap.to(window, {
-                scrollTo: {
-                    y: sections[index].offsetTop,
-                    autoKill: false
-                },
-                duration: 0.5
-            });
-        }, 100, false);
+        const handleWheel = (event) => {
+            if (isScrolling) {
+                event.preventDefault(); // Prevent default scrolling when we are already scrolling
+                return;
+            }
 
-        sections.forEach((section, index) => {
-            ScrollTrigger.create({
-                trigger: section,
-                start: "top bottom-=40%",
-                end: "bottom top+=40%",
-                onEnter: () => scrollToSection(index),
-                onEnterBack: () => scrollToSection(index),
-            });
-        });
+            // Determine scroll direction
+            const direction = event.deltaY > 0 ? 1 : -1;
+            scrollToSection(currentIndex + direction);
+        };
+
+        window.addEventListener('wheel', handleWheel, { passive: false });
+
+        return () => {
+            window.removeEventListener('wheel', handleWheel); // Clean up event listener
+        };
     }, []);
 
     return (

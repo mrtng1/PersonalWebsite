@@ -1,39 +1,35 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-x: hidden;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     padding: 30px 0;
-    background-size: 100% 100%;
-    background-image: linear-gradient(to bottom right, #0e0e0e, #1b1b1b);
+    background: linear-gradient(to bottom right, #0e0e0e, #1b1b1b);
 }
 
 .contactInfo {
     display: flex;
+    position: fixed;
     flex-direction: column;
-    position: fixed; /* eller 'absolute', afhængigt af dit layout */
-    right: 0; /* Juster denne værdi for at kontrollere afstanden fra højre kant */
-    top: 50%; /* Centrerer elementet vertikalt, juster efter behov */
-    transform: translateY(-50%); /* Sikrer at elementet er centreret fra dens midtpunkt */
-    width: 200px; /* Angiv en fast bredde */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
 }
 
 .middle {
-  display: flex;
-  width: 40%;
-  height: 80%;
-  background-color: #1b1b1b;
-  border-radius: 5%;
-    margin-top: 6%;
+    width: 60%;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    margin-top: 3%;
+    padding: 2%;
 }
-
 .headerText {
     color: #e4e4e4;
     font-size: 6em;

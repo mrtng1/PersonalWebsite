@@ -43,8 +43,8 @@ function App() {
         sections.forEach((section, index) => {
             ScrollTrigger.create({
                 trigger: section,
-                start: "top center",
-                end: "bottom center",
+                start: "top bottom-=40%",
+                end: "bottom top+=40%",
                 onEnter: () => scrollToSection(index),
                 onEnterBack: () => scrollToSection(index),
             });

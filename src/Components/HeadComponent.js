@@ -24,7 +24,6 @@ function HeadComponent() {
                 Experienced in creating responsive UIs, managing SQL databases, applying Scrum methodologies, and ensuring software and cyber security.
                 <br></br>
             </div>
-            <ContactInfo />
         </div>
     );
 }

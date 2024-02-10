@@ -1,5 +1,4 @@
 import React from 'react';
-import './SendEmailComponent.css';
 import '.././App.css';
 import { gsap } from 'gsap';
 import {CiLinkedin} from "react-icons/ci";
@@ -17,9 +16,15 @@ function ContactInfo() {
     }
     return (
         <div className="contactInfo">
-            <button className="button" onClick={() => handleButtonClick(linkedinURL)}><CiLinkedin /></button>
-            <button className="button" onClick={() => handleButtonClick(`mailto:${email}`)}><MdOutlineEmail /></button>
-            <button className="button" onClick={() => handleButtonClick(githubUrl)}><VscGithub /></button>
+            <button className="button" onClick={() => handleButtonClick(linkedinURL)}>
+                <CiLinkedin /><span>LinkedIn</span>
+            </button>
+            <button className="button" onClick={() => handleButtonClick(`mailto:${email}`)}>
+                <MdOutlineEmail /><span>Email</span>
+            </button>
+            <button className="button" onClick={() => handleButtonClick(githubUrl)}>
+                <VscGithub /><span>GitHub</span>
+            </button>
         </div>
     );
 }

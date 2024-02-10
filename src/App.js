@@ -1,5 +1,5 @@
 import './App.css';
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -8,6 +8,7 @@ import SkillsComponent from "./Components/SkillsComponent";
 import AboutMeComponent from "./Components/AboutMeComponent";
 import SendEmailComponent from "./Components/SendEmailComponent";
 import HeadComponent from "./Components/HeadComponent";
+import ContactInfo from "./Components/ContactInfo";
 
 function App() {
     useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
         <div className="main-container">
             <div className="textSection">
                 <HeadComponent />
+                <ContactInfo />
             </div>
             <div className="spaceDivider"></div>
             <div className="textSection">

@@ -15,12 +15,11 @@ body, html {
 
 .contactInfo {
     display: flex;
-    position: fixed;
-    flex-direction: column;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5%
 }
 
 .middle {
@@ -63,10 +62,10 @@ body, html {
 }
 
 .textSection, .mailSection {
-    width: 95%; /* Adjust width if necessary for your design */
-    margin: 0 auto 100px; /* Add bottom margin for spacing */
-    padding: 50px 0; /* Add padding for visual separation */
-    transition: transform 0.2s ease-out; /* Smooth transition for any hover effects */
+    width: 95%;
+    margin: 0 auto 100px;
+    padding: 50px 0;
+    transition: transform 0.2s ease-out;
 }
 
 .spaceDivider{
@@ -81,17 +80,17 @@ body, html {
 }
 
 .button {
-    scale: 260%;
-    min-height: 0;
-    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    gap: 10px; /* Space between icon and text */
+    padding: 10px 20px;
     background-color: transparent;
     border: none;
     color: #0077B5;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-    margin-top: 35%;
+    text-decoration: none;
     outline: none;
     transition: color 0.1s, transform 0.1s;
 }
@@ -102,32 +101,44 @@ body, html {
 }
 
 @media only screen and (max-width: 600px) {
-    .button {
-        scale: 200%;
-        margin-left: 15%;
+    .main-container {
+        padding-top: 0;
     }
 
-    .middle {
-        margin-top: 6%;
-        width: 75%;
+    .headerText, .subHeaderText {
+        font-size: 3em;
+        margin-right: 10%;
+        padding: 10px 0;
+    }
+
+    .subHeaderText {
+        font-size: 2em;
+    }
+
+    .aboutMe, .basicText {
+        font-size: 0.9em;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9em;
     }
 
     .contactInfo {
-        display: flex;
         flex-direction: row;
-        position: static;
-        margin-top: 2px;
-        width: 100%;
-        top: auto;
-        transform: none;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18%;
     }
 
-    .basicText {
-        color: #e4e4e4;
-        font-size: 1em;
-        margin-top: 3%;
-        margin-left: 7%;
-        margin-right: 7%;
-        line-height: 1;
+    .textSection, .mailSection {
+        padding: 25px 0;
+        margin-top: 0;
+    }
+
+    .spaceDivider {
+        height: 75px;
     }
 }

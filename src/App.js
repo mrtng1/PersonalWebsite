@@ -29,7 +29,11 @@ function App() {
                         autoKill: false
                     },
                     duration: 0.5,
-                    onComplete: () => isScrolling = false // Re-enable scrolling after animation
+                    onComplete: () => {
+                        setTimeout(() => {
+                            isScrolling = false;
+                        }, 50);
+                    }
                 });
             }
         };

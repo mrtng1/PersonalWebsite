@@ -9,6 +9,7 @@ import AboutMeComponent from "./Components/AboutMeComponent";
 import SendEmailComponent from "./Components/SendEmailComponent";
 import HeadComponent from "./Components/HeadComponent";
 import ContactInfo from "./Components/ContactInfo";
+import ProjectsComponent from "./Components/ProjectsComponent";
 
 function App() {
     useEffect(() => {
@@ -69,6 +70,10 @@ function App() {
             <div className="spaceDivider"></div>
             <div className="textSection">
                 <SkillsComponent />
+            </div>
+            <div className="spaceDivider"></div>
+            <div className="textSection">
+                <ProjectsComponent/>
             </div>
             <div className="spaceDivider"></div>
             <div className="mailSection">

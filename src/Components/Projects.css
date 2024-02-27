@@ -1,0 +1,57 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: rgba(30, 30, 30, 0.75); /* Much darker and more opaque */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Space out title, description, button, and tech stack */
+    align-items: center;
+    aspect-ratio: 3 / 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+.repo-button {
+    background-color: white;
+    border: none;
+    color: #0A0B0B;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: none;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tech-icon {
+    margin-top: 2%;
+    width: 75px;
+    height: auto;
+}

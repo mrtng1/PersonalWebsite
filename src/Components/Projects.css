@@ -6,12 +6,12 @@
 }
 
 .project-card {
-    background-color: rgba(30, 30, 30, 0.75); /* Much darker and more opaque */
+    background-color: rgba(30, 30, 30, 0.6);
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: space-between; /* Space out title, description, button, and tech stack */
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     aspect-ratio: 3 / 1;
     text-align: center;
@@ -43,6 +43,11 @@
     transition: none;
 }
 
+.repo-button:hover {
+    background-color: #0A0B0B;
+    color: white;
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +56,12 @@
 }
 
 .tech-icon {
-    margin-top: 2%;
-    width: 75px;
+    width: auto;
+    max-width: 80px;
     height: auto;
+    flex-grow: 0;
+    margin: 2px;
+    margin-top: 5px;
+    min-width: 15px;
+    max-height: 25px;
 }

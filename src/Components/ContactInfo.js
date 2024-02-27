@@ -1,6 +1,5 @@
 import React from 'react';
 import '.././App.css';
-import { gsap } from 'gsap';
 import {CiLinkedin} from "react-icons/ci";
 import {MdOutlineEmail} from "react-icons/md";
 import {VscGithub} from "react-icons/vsc";

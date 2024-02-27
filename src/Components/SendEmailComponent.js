@@ -57,20 +57,20 @@ function SendEmailComponent() {
             <div className="sendEmailContent">
                 <input
                     type="email"
-                    placeholder="Din e-mail"
+                    placeholder="Your email"
                     className={`sendEmailInput ${errors.email ? 'inputError' : ''}`}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type="text"
-                    placeholder="Dit navn"
+                    placeholder="Your Name"
                     className={`sendEmailInput ${errors.name ? 'inputError' : ''}`}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
                 <textarea
-                    placeholder="Din besked"
+                    placeholder="Your Message"
                     className={`sendEmailTextarea ${errors.message ? 'textareaError' : ''}`}
                     rows="5"
                     value={message}

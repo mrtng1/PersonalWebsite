@@ -10,12 +10,13 @@ import SendEmailComponent from "./Components/SendEmailComponent";
 import HeadComponent from "./Components/HeadComponent";
 import ContactInfo from "./Components/ContactInfo";
 import ProjectsComponent from "./Components/ProjectsComponent";
+import FooterComponent from "./Components/FooterComponent";
 
 function App() {
     useEffect(() => {
         gsap.registerPlugin(ScrollToPlugin);
 
-        const sections = gsap.utils.toArray('.textSection, .mailSection');
+        const sections = gsap.utils.toArray('.textSection, .mailSection, .footerSection');
         let currentIndex = 0; // Track the current section index
         let isScrolling = false; // Track if we are currently scrolling to prevent new scrolls
 
@@ -76,8 +77,9 @@ function App() {
                 <ProjectsComponent/>
             </div>
             <div className="spaceDivider"></div>
-            <div className="mailSection">
-                <SendEmailComponent />
+            <div className="halfDivider"></div>
+            <div className="footerSection">
+            <FooterComponent></FooterComponent>
             </div>
         </div>
     );

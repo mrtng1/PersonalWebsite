@@ -17,51 +17,46 @@ function App() {
         gsap.registerPlugin(ScrollToPlugin);
 
         const sections = gsap.utils.toArray('.textSection, .mailSection, .footerSection');
-        let currentIndex = 0;
-        let throttleTimeout = null; // Brug en throttle timeout til at forhindre for hurtig scrolling
+        let currentIndex = 0; // Track the current section index
+        let isScrolling = false; // Track if we are currently scrolling to prevent new scrolls
 
         const scrollToSection = (index) => {
-            if (index >= 0 && index < sections.length) {
-                currentIndex = index; // Opdater current index
+            if (index >= 0 && index < sections.length && !isScrolling) {
+                isScrolling = true; // Start scrolling
+                currentIndex = index; // Update current index
 
                 gsap.to(window, {
-                    scrollTo: { y: sections[index].offsetTop, autoKill: false },
-                    duration: 0.5,
-                    onStart: () => {
-                        window.removeEventListener('wheel', handleWheel); // Fjern event listener under animation
+                    scrollTo: {
+                        y: sections[index].offsetTop,
+                        autoKill: false
                     },
+                    duration: 0.5,
                     onComplete: () => {
                         setTimeout(() => {
-                            window.addEventListener('wheel', handleWheel, { passive: false }); // Tilføj den igen efter en kort pause
-                        }, 300); // Juster pause som nødvendigt for at opnå den ønskede "smoothness"
+                            isScrolling = false;
+                        }, 50);
                     }
                 });
             }
         };
 
         const handleWheel = (event) => {
-            if (throttleTimeout) return; // Hvis der allerede er en throttle timeout, ignorer event
+            if (isScrolling) {
+                event.preventDefault(); // Prevent default scrolling when we are already scrolling
+                return;
+            }
 
+            // Determine scroll direction
             const direction = event.deltaY > 0 ? 1 : -1;
             scrollToSection(currentIndex + direction);
-
-            throttleTimeout = setTimeout(() => {
-                clearTimeout(throttleTimeout);
-                throttleTimeout = null;
-            }, 300); // Vent før tilladelse af en ny scroll handling
         };
 
         window.addEventListener('wheel', handleWheel, { passive: false });
 
         return () => {
-            window.removeEventListener('wheel', handleWheel);
-            if (throttleTimeout) {
-                clearTimeout(throttleTimeout);
-            }
+            window.removeEventListener('wheel', handleWheel); // Clean up event listener
         };
     }, []);
-
-
 
     return (
         <div className="main-container">

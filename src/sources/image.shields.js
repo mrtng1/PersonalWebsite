@@ -21,6 +21,11 @@ export class TechIcons {
     static BLAZOR = "https://img.shields.io/badge/Blazor-512BD4?style=flat-square&logo=blazor&logoColor=white";
     static SCRUM = "https://img.shields.io/badge/Scrum-000000?style=flat-square&logo=scrum&logoColor=white";
     static REACT = "https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black";
+    static TESTCAFE = "https://img.shields.io/badge/TestCafe-0E346A?style=flat-square&logo=testcafe&logoColor=white";
+    static PLAYWRIGHT = "https://img.shields.io/badge/Playwright-52B0E7?style=flat-square&logo=playwright&logoColor=white";
+    static JENKINS = "https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white";
+    static FLYWAY = "https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white";
+
 }
 
 export default TechIcons;

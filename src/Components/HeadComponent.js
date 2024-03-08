@@ -6,20 +6,12 @@ function HeadComponent() {
         <div className="headerSection">
             <p className="headerText disableUserSelect">Martin Grulyo</p>
             <div className="aboutMe disableUserSelect">
-                Computer Science student with a specialization in Full Stack Development, DevOps, and Cybersecurity
-                <br></br>
-                <br></br>
-                Studying in Esbjerg, Denmark
-                <br></br>
-                <br></br>
-                Proficient in Java, TypeScript, JavaScript, Python, SQL, C#, Angular, React
-                <br></br>
-                Docker, SonarQube, Drone CI and others.
-                <br></br>
-                <br></br>
-                Experienced in creating responsive UIs, managing SQL databases, applying Scrum methodologies, and ensuring software and cyber security.
-                <br></br>
-                <br></br>
+                <p>👨‍💻 CS Student, from Slovakia</p>
+                <p>🖥️ My Frameworks React, Vue, Angular, Blazor</p>
+                <p>🔧 TechStack C# .NET, Java, JavaScript and TypeScript, Python</p>
+                <p>🌍 Languages Slovak, Czech, English, Danish, German</p>
+                <p>💼 DevOps & Cybersecurity Aspirant</p>
+                <p>🚀 Loves innovation and teamwork</p>
             </div>
         </div>
     );

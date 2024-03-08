@@ -6,11 +6,12 @@ function AboutMeComponent() {
         <div>
             <div className="subHeaderText disableUserSelect">About Me</div>
             <ul className="basicText">
-                <li>Computer Science Student from Bratislava, Slovakia.</li> <br></br>
-                <li>Specialize in Back-End and Front-End Development; studying DevOps and Cyber-security, with CCNA1 certification.</li> <br></br>
-                <li>Expanding skills into C# and web development with React & Angular, balancing multiple projects with proven leadership in team environments.</li> <br></br>
-                <li>Strengths: dedication, reliability, teamwork, and commitment to high-quality software with a focus on web security and agile practices.</li> <br></br>
-                <li>Eager to connect, contribute, and continuously learn and innovate in web technologies.</li> <br></br>
+                <li>Studying Computer Science in Slovakia, focusing on software development and web technologies.</li>
+                <li>Familiar with Back-End, Front-End, DevOps, and Cyber-security.</li>
+                <li>Preferred Front-End Frameworks, React, Vue and Angular and the basics of Blazor</li>
+                <li>Holder of a CCNA1 networking certificate; dedicated to learning about security in software development.</li>
+                <li>Knowledgeable in Slovak, Czech, English, Danish, and a bit of German.</li>
+                <li>Eager to continuously learn and explore innovations in web technologies.</li>
             </ul>
         </div>
     );

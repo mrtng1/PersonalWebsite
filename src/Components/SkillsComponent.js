@@ -112,6 +112,26 @@ function SkillsComponent() {
                     <img src={TechIcons.SCRUM} alt="Scrum"/>
                     Scrum
                 </div>
+                {/*Jenkins */}
+                <div className="skillItem" onClick={() => navigateTo("https://www.jenkins.io/")}>
+                    <img src={TechIcons.JENKINS} alt="Jenkins"/>
+                    Jenkins
+                </div>
+                {/*Flyway */}
+                <div className="skillItem" onClick={() => navigateTo("https://flywaydb.org/")}>
+                    <img src={TechIcons.FLYWAY} alt="Flyway"/>
+                    Flyway
+                </div>
+                {/*TestCafe */}
+                <div className="skillItem" onClick={() => navigateTo("https://testcafe.io/")}>
+                    <img src={TechIcons.TESTCAFE} alt="TestCafe"/>
+                    TestCafe
+                </div>
+                {/*Playwright */}
+                <div className="skillItem" onClick={() => navigateTo("https://playwright.dev/")}>
+                    <img src={TechIcons.PLAYWRIGHT} alt="Playwright"/>
+                    Playwright
+                </div>
             </div>
         </div>
     );

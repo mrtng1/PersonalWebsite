@@ -14,9 +14,9 @@ function FooterComponent() {
 
     return (
         <footer style={footerStyle}>
-            <p>© 2024 Martin Grulyo | Computer Science Student, Slovakia</p>
+            <p>© 2024 Martin Grulyo | Computer Science Student, Esbjerg</p>
             <p>📧 Email: martingrulyo@gmail.com</p>
-            <p>Open to opportunities, collaborations, and learning new technologies!</p>
+            <p>Open to job or internship opportunities!</p>
         </footer>
     );
 }

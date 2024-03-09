@@ -1,5 +1,4 @@
 import React from 'react';
-import './SendEmailComponent.css';
 import '.././App.css';
 import TechIcons from "../sources/image.shields";
 

@@ -6,7 +6,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import SkillsComponent from "./Components/SkillsComponent";
 import AboutMeComponent from "./Components/AboutMeComponent";
-import SendEmailComponent from "./Components/SendEmailComponent";
 import HeadComponent from "./Components/HeadComponent";
 import ContactInfo from "./Components/ContactInfo";
 import ProjectsComponent from "./Components/ProjectsComponent";

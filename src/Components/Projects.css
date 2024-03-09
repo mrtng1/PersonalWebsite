@@ -16,6 +16,7 @@
     aspect-ratio: 3 / 1;
     text-align: center;
     transition: transform 0.3s ease;
+    min-height: 100px;
 }
 
 .project-card:hover {
@@ -64,4 +65,11 @@
     margin-top: 5px;
     min-width: 15px;
     max-height: 25px;
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        aspect-ratio: auto;
+        min-height: 200px;
+    }
 }

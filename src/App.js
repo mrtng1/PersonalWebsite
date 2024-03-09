@@ -6,13 +6,13 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import SkillsComponent from "./Components/SkillsComponent";
 import AboutMeComponent from "./Components/AboutMeComponent";
-import HeadComponent from "./Components/HeadComponent";
+import IntroComponent from "./Components/IntroComponent";
 import ContactInfo from "./Components/ContactInfo";
 import ProjectsComponent from "./Components/ProjectsComponent";
 import FooterComponent from "./Components/FooterComponent";
 
 function App() {
-    useEffect(() => {
+    /**useEffect(() => {
         gsap.registerPlugin(ScrollToPlugin);
 
         const sections = gsap.utils.toArray('.textSection, .mailSection, .footerSection');
@@ -56,11 +56,12 @@ function App() {
             window.removeEventListener('wheel', handleWheel); // Clean up event listener
         };
     }, []);
+    **/
 
     return (
         <div className="main-container">
             <div className="textSection">
-                <HeadComponent />
+                <IntroComponent />
                 <ContactInfo />
             </div>
             <div className="spaceDivider"></div>
@@ -76,7 +77,6 @@ function App() {
                 <ProjectsComponent/>
             </div>
             <div className="spaceDivider"></div>
-            <div className="halfDivider"></div>
             <div className="footerSection">
             <FooterComponent></FooterComponent>
             </div>
